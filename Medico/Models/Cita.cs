@@ -1,4 +1,4 @@
-﻿using Medico.NewFolder;
+﻿using Medico.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Medico.Models

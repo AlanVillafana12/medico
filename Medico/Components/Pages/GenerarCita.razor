@@ -1,0 +1,44 @@
+﻿@page "/agendar"
+@using Medico.Models
+@using Medico.Services
+@rendermode InteractiveServer
+@inject ICitas iCitas 
+
+
+<div class="card">
+    <div class="card-body">
+        <EditForm Model="cita" OnInvalidSubmit="Registro">
+          <select @bind="cita.PacienteId">
+              @foreach(var paciente in pacientes){
+                <option value="@paciente.Id">@paciente.Nombre</option>
+              }   
+          </select>
+        <div class="form-outline" data-mdb-input-init>
+            <input type="text" id="form12" class="form-control" @bind-value="cita.Fecha" />
+            <label class="form-label" for="form12">Fecha y Hora</label>
+        </div>
+        <div class="form-outline" data-mdb-input-init>
+            <textarea class="form-control" id="textAreaExample" rows="4" @bind="cita.Observaciones"></textarea>
+            <label class="form-label" for="textAreaExample">Observacines</label>
+        </div>
+        <button type="submit" class="btn btn-primary" data-mdb-ripple-init>Agendar</button>
+        </EditForm>
+    </div>
+</div>
+
+
+@code {
+    List<Paciente> pacientes = new List<Paciente>();
+    Cita cita = new Cita();
+
+    protected override async Task OnInitializedAsync(){
+        pacientes = await iCitas.Pacientes();
+    }
+
+    async void Registro()
+    {
+
+        cita.Fecha = DateTime.Parse(cita.Fecha);
+        iCitas.AgendarCita(cita);
+    }
+}

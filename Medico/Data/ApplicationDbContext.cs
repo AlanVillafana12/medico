@@ -1,5 +1,4 @@
 using Medico.Models;
-using Medico.NewFolder;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

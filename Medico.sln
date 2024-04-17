@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medico", "Medico\Medico.csproj", "{6B76182F-3BD7-4280-89F5-DDBB78C06060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medico", "Medico\Medico.csproj", "{6B76182F-3BD7-4280-89F5-DDBB78C06060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medico.Client", "Medico.Client\Medico.Client.csproj", "{F8CF6EFF-7F4C-4641-A4F2-B19A7F8A7DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medico.Client", "Medico.Client\Medico.Client.csproj", "{F8CF6EFF-7F4C-4641-A4F2-B19A7F8A7DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

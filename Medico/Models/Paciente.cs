@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Medico.NewFolder
+namespace Medico.Models
 {
     public class Paciente
     {
